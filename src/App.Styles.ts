@@ -11,7 +11,7 @@ export const HeaderText = styled.h1`
     margin: 0;
     padding: 0;
     color: #FFF;
-    padding-top: 10px;
+    padding-top: 30px;
     `;
 
 export const Body = styled.div``;

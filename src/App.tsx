@@ -25,7 +25,7 @@ const App = () => {
     let expenseCount = 0;
 
     for(let i in filteredList){
-        if(categories[filteredList[i].category].expense){
+        if(categories[filteredList[i].Category].expense){
           expenseCount += filteredList[i].value;
         }else{
           incomeCount += filteredList[i].value;
@@ -37,6 +37,11 @@ const App = () => {
 
   const handleMonthChange =(newMonth: string) => {
     setCurrentMonth(newMonth);
+  }
+  const handleAddItem = (item: Item) =>{
+    let newList = [...list];
+    newList.push(item);
+    setlist(newList);
   }
 
   return (
@@ -51,7 +56,7 @@ const App = () => {
         expense={expense}
         />
 
-        <InputArea />
+        <InputArea onAdd={handleAddItem} />
 
         <TableArea list={filteredList} />
       </C.Body>

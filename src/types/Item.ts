@@ -1,6 +1,6 @@
 export type Item = {
     date: Date;
-    category: string;
+    Category: string;
     title: string;
     value: number;
     

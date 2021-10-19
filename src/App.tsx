@@ -6,6 +6,7 @@ import {categories} from './data/categories';
 import {items} from './data/items';
 import { getcurrentMonth, filterListByMonth } from './helpers/dateFilter';
 import { TableArea } from './components/TableArea/Index';
+import { InfoArea } from './components/InfoArea/Index';
 
 const App = () => {
   const [list, setlist] = useState(items);
@@ -22,7 +23,7 @@ const App = () => {
         <C.HeaderText>Sistema Financeiro</C.HeaderText>
       </C.Header>
       <C.Body>
-        {/*Area de informações*/}
+        <InfoArea />
 
         {/*Area de inserção*/}
 
